@@ -26,11 +26,13 @@ namespace NoteAPI
     public class Startup
     {
         private readonly string _MSSQLConnection = "";
+        private readonly string _MySQLConnection = "";
 
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
             _MSSQLConnection = Configuration["ConnectionStrings:DefaultConnection"];
+            _MySQLConnection = Configuration["ConnectionStrings:MySQLConnection"];
         }
 
         public IConfiguration Configuration { get; }
@@ -51,12 +53,12 @@ namespace NoteAPI
             });
 
             //Add NumberService
-            services.AddDbContext<NumberContext>(option => option.UseSqlServer(_MSSQLConnection));
-            services.AddScoped<INumberContext, NumberContext>();
-            services.AddScoped<INumberService, NumberService>();
+            //services.AddDbContext<NumberContext>(option => option.UseSqlServer(_MSSQLConnection));
+            //services.AddScoped<INumberContext, NumberContext>();
+            //services.AddScoped<INumberService, NumberService>();
 
             //Add BlogService
-            services.AddDbContext<BlogContext>(option => option.UseSqlServer(_MSSQLConnection));
+            services.AddDbContext<BlogContext>(option => option.UseMySql(_MySQLConnection));
             services.AddScoped<IBlogContext, BlogContext>();
             services.AddScoped<IBlogService, BlogService>();
 

@@ -3,15 +3,15 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace NoteAPI.Models.Blog
 {
-    [Table("blogTab")]
+    [Table("blog_tab")]
     public class BlogModel
     {
         public string blogId { get; set; }
-        public string blogDescription { get; set; }
+        public string description { get; set; }
     }
 
     public class SaveNewBlogModel
     {
-        public string blogDescription { get; set; }
+        public string description { get; set; }
     }
 }

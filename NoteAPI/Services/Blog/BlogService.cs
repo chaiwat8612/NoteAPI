@@ -74,7 +74,7 @@ namespace NoteAPI.Services.Blog
 
             //blogModel.blogId = this.genTransactionNumberService.GenTransactionNumber(maxTransactionNumber, DateTime.Now).Trim();
             blogModel.blogId = this.genTransactionNumberService.GenTransactionNumber(maxTransactionNumber, DateTime.Now).Trim();
-            blogModel.blogDescription = saveNewBlogModel.blogDescription;
+            blogModel.description = saveNewBlogModel.description;
 
             if (IsSaveNewBlog(blogModel))
             {
