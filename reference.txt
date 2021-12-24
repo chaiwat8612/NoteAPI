@@ -1,0 +1,7 @@
+Reference
+26-Oct-21
+-- Customize Swagger to ASP.NET Core 2.1 Web API
+https://www.linkedin.com/pulse/customize-swagger-aspnet-core-21-web-api-salman-tariq
+
+-- สร้าง API Document กับ .NET Core ง่ายๆ ด้วย Swagger
+https://ifew.medium.com/แสร้าง-api-document-กับ-net-core-ง่ายๆ-ด้วย-swagger-6c49e3e8f555
